@@ -13,7 +13,7 @@ angular.module('buzzwordBingoApp')
       if($scope.newThing === '') {
         return;
       }
-      $http.post('/api/things', { name: $scope.newThing });
+      $http.post('/api/things', { name: $scope.newThing.name, info: $scope.newThing.info });
       $scope.newThing = '';
     };
 

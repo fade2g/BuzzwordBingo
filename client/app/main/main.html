@@ -5,7 +5,7 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default"  ng-repeat="thing in awesomeThings">
+        <div class="panel panel-default" ng-repeat="thing in awesomeThings">
           <div class="panel-heading" role="tab" id="heading{{thing._id}}">
             <h4 class="panel-title">
               <a class="collapsed" data-toggle="collapse" expanded="false" data-parent="#accordion" href="#collapse{{thing._id}}" aria-expanded="false" aria-controls="collapse{{thing._id}}">
@@ -31,6 +31,47 @@
   </div>
 
   -->
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel-group" id="add-accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="add-heading">
+            <h4 class="panel-title">
+              <a class="collapsed" data-toggle="collapse" expanded="false" data-parent="#add-accordion" href="#add-collapse" aria-expanded="false" aria-controls="add-collapse">
+                Add a new Buzzword
+              </a>
+            </h4>
+          </div>
+          <div id="add-collapse" class="panel-collapse collapse" role="tabpanel" aria-labelledby="add-heading">
+            <div class="panel-body">
+              <form class="thing-form form-horizontal">
+                <div class="form-group">
+                  <label for="add-buzzword" class="col-sm-2 control-label">Buzzword</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="add-buzzword" placeholder="Buzzword" ng-model="newThing.name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="add-description" class="col-sm-2 control-label">Description</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" id="add-description" placeholder="Description" rows="3" ng-model="newThing.info"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary" ng-click="addThing()">Add New</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
   <form class="thing-form">
     <label>Syncs in realtime across clients</label>
     <p class="input-group">
@@ -40,6 +81,7 @@
       </span>
     </p>
   </form>
+  -->
 </div>
 
 <footer class="footer">
